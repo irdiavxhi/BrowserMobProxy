@@ -1,0 +1,27 @@
+;This is window entity variable
+Local $classForBasicAuthWindowMozilla = "[CLASS:MozillaDialogClass]"
+Local $classForBasicAuthWindowIE = "[CLASS:Edit; INSTANCE:1]"
+
+
+;Waiting for window appear
+
+WinWait($classForBasicAuthWindowIE, "", 10)
+
+
+If WinExists($classForBasicAuthWindowIE) Then
+   WinActivate($classForBasicAuthWindowIE)
+
+   ;Enter values from CMD argument list
+   Send($CmdLine[1] & "{TAB}")
+   Send($CmdLine[2] & "{ENTER}")
+EndIf
+
+WinWait($classForBasicAuthWindowMozilla, "", 10)
+
+If WinExists($classForBasicAuthWindowMozilla) Then
+   WinActivate($classForBasicAuthWindowMozilla)
+
+   ;Enter values from CMD argument list
+   Send($CmdLine[1] & "{TAB}")
+   Send($CmdLine[2] & "{ENTER}")
+EndIf
