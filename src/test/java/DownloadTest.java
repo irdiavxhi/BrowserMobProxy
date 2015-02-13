@@ -10,9 +10,7 @@ import org.testng.annotations.Test;
 
 import java.io.File;
 
-/**
- * Created by Irko on 13.02.2015.
- */
+
 public class DownloadTest {
     @Test
     public void downloadingFiles() throws Exception {
