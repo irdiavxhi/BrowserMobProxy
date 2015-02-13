@@ -11,9 +11,7 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by Acer on 11.02.2015.
- */
+
 public class FileDownloader implements HttpResponseInterceptor {
 
     private Set<String> contentTypes = new HashSet<String>();

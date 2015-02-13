@@ -11,7 +11,7 @@ public class UploadTest {
         WebDriver driver = new ChromeDriver();
         driver.get("http://the-internet.herokuapp.com/");
         driver.findElement(By.linkText("File Upload")).click();
-        driver.findElement(By.cssSelector("input[type='file']")).sendKeys("D:\\students\\Path.txt");
+        driver.findElement(By.cssSelector("input[type='file']")).sendKeys("D:\\students\\Screen.png");
         driver.findElement(By.id("file-submit")).click();
         Assert.assertTrue(driver.getPageSource().contains("File Uploaded!"));
     }

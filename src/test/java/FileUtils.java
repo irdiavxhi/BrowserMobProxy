@@ -4,9 +4,7 @@ import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-/**
- * Created by andreystakhievich on 2/9/2015.
- */
+
 public class FileUtils {
     public static String generateMD5(File file) throws Exception {
         return hashFile(file, "MD5");
