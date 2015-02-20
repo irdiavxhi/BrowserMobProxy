@@ -37,10 +37,10 @@ public class FileDownloader implements HttpResponseInterceptor {
         String contentType = response.getFirstHeader("Content-Type").getValue();
 //        context.getAttribute()
         System.out.println(((RequestWrapper) context.getAttribute("http.request")).getURI().getPath() + " - " + contentType);
-        if (contentTypes.contains(contentType) && ((RequestWrapper) context.getAttribute("http.request")).getURI().getPath().contains(fileName)) {
+        if (contentTypes.contains(contentType)) {// && ((RequestWrapper) context.getAttribute("http.request")).getURI().getPath().contains(fileName)) {
             System.out.println("!");
 
-            
+
             String postfix = contentType.substring(contentType.indexOf('/') + 1);
             tempFile = File.createTempFile("downloaded", "." + postfix, tempDir);
             tempFile.deleteOnExit();
